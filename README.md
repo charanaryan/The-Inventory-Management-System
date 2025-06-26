@@ -162,7 +162,7 @@ Visit [http://localhost:5173](http://localhost:5173)
 ## 🖼️ Screenshots
 
 ### Product Management Page
-![Product Management Page](./screenshots/product-management.png)
+![Product Management Page](./client/screenshots/product-management.png)
 
 ### Add Product Form
 ![Add Product Form](./client/screenshots/add-product.png)

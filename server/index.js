@@ -17,6 +17,10 @@ connectDB()
 
 const port = process.env.PORT
 
+server.get('/', (req,res) => {
+    res.send("The system is running")
+})
+
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 })

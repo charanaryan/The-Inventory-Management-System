@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ProductList from '../components/ProductList';
+import ProductList from '../components/productList';
 import ProductForm from '../components/productForm';
 
 

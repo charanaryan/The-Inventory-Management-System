@@ -8,7 +8,7 @@ import ProductDetails from './components/productDetails';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-dark text-white p-8">
+    <div className="min-h-screen bg-dark text-white p-4 sm:p-6 md:p-8">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

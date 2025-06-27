@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+const baseURL = import.meta.env.VITE_API_URL;
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -9,7 +11,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://the-inventory-management-system-server-ksgy.onrender.com/api/products/${id}`);
+        const response = await fetch(`${baseURL}/api/products/${id}`);
         const data = await response.json();
         setProduct(data);
       } catch (error) {

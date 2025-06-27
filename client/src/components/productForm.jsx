@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import './ProductForm.css'; // Include the CSS file if styling is needed
+const baseURL = import.meta.env.VITE_API_URL;
 
 const ProductForm = ({ existingProduct = null, onSuccess }) => {
   const [product, setProduct] = useState({
@@ -33,13 +34,13 @@ const ProductForm = ({ existingProduct = null, onSuccess }) => {
       if (existingProduct) {
         // Update request
         await axios.put(
-          `https://the-inventory-management-system-server-ksgy.onrender.com/api/updateproducts/${existingProduct._id}`,
+          `${baseURL}/api/updateproducts/${existingProduct._id}`,
           product
         );
         alert('Product updated successfully!');
       } else {
         // Create request
-        await axios.post('https://the-inventory-management-system-server-ksgy.onrender.com/api/products', product);
+        await axios.post(`${baseURL}/api/products`, product);
         alert('Product created successfully!');
       }
 

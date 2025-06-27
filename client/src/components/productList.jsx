@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // If you have Heroicons installed, you can use:
 // import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid';
+const baseURL = import.meta.env.VITE_API_URL;
 
 const ProductList = ({ onEdit }) => {
   const [products, setProducts] = useState([]);
@@ -9,7 +10,7 @@ const ProductList = ({ onEdit }) => {
   // Fetch all products
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/getallproducts');
+      const response = await fetch(`${baseURL}/api/getallproducts`);
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -25,7 +26,7 @@ const ProductList = ({ onEdit }) => {
     if (!confirm) return;
 
     try {
-      const response = await fetch(`https://the-inventory-management-system-server-ksgy.onrender.com/api/deleteproducts/${id}`, {
+      const response = await fetch(`${baseURL}/api/deleteproducts/${id}`, {
         method: 'DELETE',
       });
 

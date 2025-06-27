@@ -33,13 +33,13 @@ const ProductForm = ({ existingProduct = null, onSuccess }) => {
       if (existingProduct) {
         // Update request
         await axios.put(
-          `http://localhost:5000/api/updateproducts/${existingProduct._id}`,
+          `https://the-inventory-management-system-server-ksgy.onrender.com/api/updateproducts/${existingProduct._id}`,
           product
         );
         alert('Product updated successfully!');
       } else {
         // Create request
-        await axios.post('http://localhost:5000/api/products', product);
+        await axios.post('https://the-inventory-management-system-server-ksgy.onrender.com/api/products', product);
         alert('Product created successfully!');
       }
 

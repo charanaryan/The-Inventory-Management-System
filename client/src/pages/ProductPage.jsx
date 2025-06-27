@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ProductForm from '../components/ProductForm';
 import ProductList from '../components/ProductList';
+import ProductForm from '../components/productForm';
+
 
 const ProductPage = () => {
   const [editableProduct, setEditableProduct] = useState(null);
